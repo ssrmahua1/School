@@ -29,23 +29,45 @@
                 <option value="St Xavier School">St Xavier School</option>
             </select>
         </div>
+
+        <!-- Class Selection -->
+        <div class="form-group">
+            <label for="class">Class:</label>
+            <select id="class">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+
+        <!-- Roll Number -->
         <div class="form-group">
             <label for="roll-number">Roll Number:</label>
             <input type="number" id="roll-number" placeholder="Enter Roll Number" required>
         </div>
+
         <div class="form-group">
             <button id="submit-btn" onclick="displayResult()">Submit</button>
         </div>
     </div>
 
     <!-- Result Display Section -->
-    <div class="result-container" id="result-container" style="display: none;">
+    <div class="result-container" id="result-container">
         <h3>Student Result</h3>
         <div class="result-header">
             <h3>School: <span id="school-name"></span></h3>
-            <h4>Class: <span id="class"></span></h4>
+            <h3> Mahua Vaishali(Bihar)</h3>
+            <h4>Class: <span id="class-result"></span></h4>
             <h4>Roll Number: <span id="roll-number-result"></span></h4>
             <h4>Student Name: <span id="student-name-result"></span></h4>
+            <h6> This is a provisional result issued for the student. The information provided herein is based on the available data and calculations. In case of any discrepancies or issues regarding the marks, CGPA, or status, the result is subject to verification and confirmation from the school administration. For any clarification or further inquiries, please contact the school office.</h6>
         </div>
         <table>
             <thead>
