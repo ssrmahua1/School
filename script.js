@@ -1,24 +1,21 @@
 let studentsData = {};
 
 function loadCSV() {
-    // Load the CSV file using fetch
     fetch('students_data.csv')
         .then(response => response.text())
         .then(data => {
             parseCSV(data);
         })
         .catch(error => {
-            console.error("Error loading CSV data: ", error);
-            alert("Error loading CSV data. Please check the file path.");
+            console.error("Error loading CSV data: ", error); // You can keep this for debugging purposes
         });
 }
 
-// Function to parse the CSV data
+// Parse CSV Data
 function parseCSV(csvData) {
     const rows = csvData.split('\n');
     const headers = rows[0].split(','); // Assumes the first row contains headers
 
-    // Parse each row and organize the data by school
     rows.slice(1).forEach(row => {
         const columns = row.split(',');
 
@@ -38,7 +35,6 @@ function parseCSV(csvData) {
             passFail: columns[12].trim()
         };
 
-        // Add the student data to the appropriate school group
         if (!studentsData[school]) {
             studentsData[school] = [];
         }
@@ -50,15 +46,14 @@ function parseCSV(csvData) {
 
 function displayResult() {
     const schoolName = document.getElementById('school').value;
+    const className = document.getElementById('class').value;
     const rollNumber = document.getElementById('roll-number').value;
 
-    // Find the student in the selected school
-    const student = studentsData[schoolName]?.find(s => s.rollNo == rollNumber);
+    const student = studentsData[schoolName]?.find(s => s.rollNo == rollNumber && s.class == className);
 
     if (student) {
-        // Populate the result display
         document.getElementById('school-name').innerText = schoolName;
-        document.getElementById('class').innerText = student.class;
+        document.getElementById('class-result').innerText = student.class;
         document.getElementById('roll-number-result').innerText = student.rollNo;
         document.getElementById('student-name-result').innerText = student.name;
 
@@ -75,10 +70,9 @@ function displayResult() {
             <tr><td>Pass/Fail</td><td>${student.passFail}</td></tr>
         `;
 
-        // Show result section
         document.getElementById('result-container').style.display = 'block';
     } else {
-        alert("Student not found. Please check the roll number.");
+        alert("Student not found. Please check the roll number and class.");
     }
 }
 
