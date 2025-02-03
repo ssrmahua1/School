@@ -31,7 +31,7 @@ function parseCSV(csvData) {
             social: parseInt(columns[8].trim()),
             computer: parseInt(columns[9].trim()),
             totalMarks: parseInt(columns[10].trim()),
-            cgpa: parseFloat(columns[11].trim()),
+            Percentage: parseFloat(columns[11].trim()),
             passFail: columns[12].trim()
         };
 
@@ -66,7 +66,7 @@ function displayResult() {
             <tr><td>Social</td><td>${student.social}</td></tr>
             <tr><td>Computer</td><td>${student.computer}</td></tr>
             <tr><td>Total Marks</td><td>${student.totalMarks}</td></tr>
-            <tr><td>Percentage</td><td>${student.cgpa}</td></tr>
+            <tr><td>Percentage</td><td>${student.Percentage}</td></tr>
             <tr><td>Pass/Fail</td><td>${student.passFail}</td></tr>
         `;
 
