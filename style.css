@@ -1,0 +1,188 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0c0c0c;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('cyber-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+/* Header */
+.header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.5);
+    border-bottom: 2px solid #00ffcc;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.8));
+}
+
+h1 {
+    font-size: 40px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #00ffcc;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Container */
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+/* Title */
+.container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00ffcc;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+select, input[type="number"], .captcha input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #00ffcc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #0b0b0b;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    color: #000;
+    background-color: #00ffcc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00cc99;
+}
+
+/* CAPTCHA Section */
+.captcha {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Result Container */
+.result-container {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00ffcc;
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.result-container h3 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #00ffcc;
+}
+
+.result-header h4 {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #00ffcc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #00ffcc;
+    text-align: left;
+    color: #fff;
+}
+
+th {
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+#status, #cgpa {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #00ffcc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 30px;
+}
+
+/* Mobile-Friendly */
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .result-container {
+        max-width: 90%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
