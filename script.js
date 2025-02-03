@@ -66,7 +66,7 @@ function displayResult() {
             <tr><td>Social</td><td>${student.social}</td></tr>
             <tr><td>Computer</td><td>${student.computer}</td></tr>
             <tr><td>Total Marks</td><td>${student.totalMarks}</td></tr>
-            <tr><td>CGPA</td><td>${student.cgpa}</td></tr>
+            <tr><td>Percentage</td><td>${student.cgpa}</td></tr>
             <tr><td>Pass/Fail</td><td>${student.passFail}</td></tr>
         `;
 
