@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header">
+            <img src="https://i.pinimg.com/736x/ea/14/0a/ea140a9f6e4681b64b35262cf873f026.jpg" alt="School Logo" class="logo">
+            <h1>School Result</h1>
+            <p class="subtitle">Check your exam results here</p>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <h2>Check Student Result</h2>
+        <!-- Form to get student data -->
+        <div class="form-group">
+            <label for="school">School Name:</label>
+            <select id="school">
+                <option value="Oxford Public School">Oxford Public School</option>
+                <option value="St Joseph School">St Joseph School</option>
+                <option value="St Johns School">St Johns School</option>
+                <option value="St Xavier School">St Xavier School</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="roll-number">Roll Number:</label>
+            <input type="number" id="roll-number" placeholder="Enter Roll Number" required>
+        </div>
+        <div class="form-group">
+            <button id="submit-btn" onclick="displayResult()">Submit</button>
+        </div>
+    </div>
+
+    <!-- Result Display Section -->
+    <div class="result-container" id="result-container" style="display: none;">
+        <h3>Student Result</h3>
+        <div class="result-header">
+            <h3>School: <span id="school-name"></span></h3>
+            <h4>Class: <span id="class"></span></h4>
+            <h4>Roll Number: <span id="roll-number-result"></span></h4>
+            <h4>Student Name: <span id="student-name-result"></span></h4>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Marks Obtained</th>
+                </tr>
+            </thead>
+            <tbody id="result-table">
+                <!-- Dynamically filled with JavaScript -->
+            </tbody>
+        </table>
+        <h3 id="status">Result: <span></span></h3>
+        <h4>CGPA: <span id="cgpa"></span></h4>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 School Result. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
