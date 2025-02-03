@@ -77,7 +77,7 @@ select, input[type="number"], .captcha input {
     margin-bottom: 15px;
     border: 1px solid #00ffcc;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgb(244, 233, 233);
     color: #0b0b0b;
     font-size: 16px;
     font-weight: bold;
